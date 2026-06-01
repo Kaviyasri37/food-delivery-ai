@@ -1,0 +1,412 @@
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0f172a;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  background: #1e293b;
+  padding: 18px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar h1 {
+  color: #f59e0b;
+  font-size: 36px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: #f59e0b;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  min-height: 420px;
+  background:
+    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+    url("https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1600&auto=format&fit=crop");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 55px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 22px;
+  margin-bottom: 25px;
+  color: #e2e8f0;
+}
+
+.hero-btn {
+  background: #f59e0b;
+  color: #111827;
+  padding: 15px 30px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* =========================
+   PAGE
+========================= */
+
+.menu-section,
+.page {
+  padding: 50px;
+}
+
+.section-title,
+.page h2 {
+  text-align: center;
+  font-size: 42px;
+  margin-bottom: 35px;
+}
+
+/* =========================
+   CATEGORY BUTTONS
+========================= */
+
+.category-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.category-buttons button {
+  background: #1e293b;
+  color: white;
+  border: 2px solid #f59e0b;
+  padding: 14px 24px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.category-buttons button:hover,
+.active-category {
+  background: #f59e0b !important;
+  color: #111827 !important;
+}
+
+/* =========================
+   FOOD CARDS
+========================= */
+
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 280px));
+  gap: 30px;
+  justify-content: center;
+}
+
+.food-card {
+  background: #1e293b;
+  border-radius: 22px;
+  overflow: hidden;
+  width: 280px;
+  transition: 0.4s;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+}
+
+.food-card:hover {
+  transform: translateY(-10px);
+}
+
+.food-card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+}
+
+.food-info {
+  padding: 20px;
+}
+
+.food-info h3 {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.food-info p {
+  color: #cbd5e1;
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.food-info small {
+  color: #f59e0b;
+  font-size: 15px;
+}
+
+.price-cart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 22px;
+}
+
+.price-cart span {
+  color: #f59e0b;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+/* =========================
+   COMMON BUTTON
+========================= */
+
+button {
+  background: #f59e0b;
+  color: #111827;
+  border: none;
+  padding: 11px 18px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #ffb703;
+  transform: scale(1.05);
+}
+
+/* =========================
+   CART
+========================= */
+
+.cart-item {
+  background: #1e293b;
+  padding: 18px;
+  margin-bottom: 16px;
+  border-radius: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.total {
+  margin-top: 25px;
+  color: #f59e0b;
+  font-size: 30px;
+}
+
+.empty-text {
+  text-align: center;
+  color: #cbd5e1;
+  font-size: 22px;
+}
+
+.checkout-btn {
+  width: 100%;
+  margin-top: 30px;
+  padding: 16px;
+  background: #10b981;
+  font-size: 18px;
+}
+
+/* =========================
+   FORM
+========================= */
+
+.form-page {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-box,
+.payment-box {
+  background: #1e293b;
+  padding: 40px;
+  width: 420px;
+  border-radius: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+}
+
+.form-box h2,
+.form-box h3,
+.payment-box h2,
+.payment-box h3 {
+  text-align: center;
+  color: #f59e0b;
+}
+
+.form-box input,
+.form-box select,
+.payment-box input {
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+/* =========================
+   AI MOOD PAGE
+========================= */
+
+.mood-box {
+  background: #1e293b;
+  padding: 40px;
+  border-radius: 24px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 32px;
+  color: white;
+  margin-bottom: 35px;
+}
+
+.mood-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.mood-button-container button {
+  background: #f59e0b;
+  color: #111827;
+  border: none;
+  padding: 18px 32px;
+  border-radius: 16px;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.mood-button-container button:hover {
+  background: #ffb703;
+  transform: translateY(-5px);
+}
+
+.mood-title {
+  text-align: center;
+  color: #f59e0b;
+  margin-bottom: 35px;
+  font-size: 30px;
+}
+
+/* =========================
+   ADMIN
+========================= */
+
+.admin-container {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 50px;
+}
+
+.admin-banner {
+  max-width: 520px;
+  padding: 60px;
+  border-radius: 25px;
+  background:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1200&auto=format&fit=crop");
+  background-size: cover;
+  background-position: center;
+}
+
+.admin-banner h1 {
+  color: #f59e0b;
+  font-size: 46px;
+}
+
+.admin-banner p {
+  margin-top: 18px;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero h2 {
+    font-size: 38px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  .admin-container {
+    flex-direction: column;
+  }
+
+  .food-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mood-button-container {
+    flex-direction: column;
+  }
+  
+}
